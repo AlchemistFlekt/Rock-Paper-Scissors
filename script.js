@@ -40,11 +40,21 @@ function playRound(playerSelection, computerSelection){              //function 
     }
 
 }
-function game(){   
-                       //Play a 5 round game
-    for(let i= 0; i<1; i++){         //Loop for playing multiple rounds, stopping after fifth round
-        let userInput= prompt("Choose Rock, Paper, or Scissors");
-        playerSelection= userInput.toLowerCase();
+function game(){                                                        //play a 5 round game
+    for(let i= 0; i<5; i++){                                            //loop for playing multiple rounds, stopping after fifth round
+        let userInput= prompt("Choose Rock, Paper, or Scissors");       //prompt player to choose option
+        playerSelection= userInput.toLowerCase();                       //convert user input to lowercase to avoid case sensitivity
+        
+        while(true){                                                    //while loop to check for valid user input                                                
+            if(playerSelection=="rock" || playerSelection=="paper"|| playerSelection=="scissors"){  //checks to see if playerSelection is valid
+                break;                                                  //exit loop if player choice is valid
+            }
+            else{                                                       //branch for if player input is invalid
+                let userInput= prompt("Invalid Input. Try again!\nChoose Rock, Paper, or Scissors");    //prompt player to try again and input a new option
+                playerSelection= userInput.toLowerCase();                //convert user input to lowercase to avoid case sensitivity
+            }
+        }
+
         console.log(playerSelection);
         let computerSelection= getComputerChoice();
         playRound(playerSelection, computerSelection);
