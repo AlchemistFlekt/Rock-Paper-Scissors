@@ -26,10 +26,10 @@ function playRound(playerSelection, computerSelection){              //function 
     else if(playerSelection=="scissors"&& computerSelection=="paper"){
         console.log("You Win! Scissors beats Paper");
     }
-    else if(playerSelection=="scissor"&& computerSelection=="rock"){
+    else if(playerSelection=="scissors"&& computerSelection=="rock"){
         console.log("You Lose! Rock beats Scissors");
     }
-    else if(playerSelection=="paper"&& computerSelection=="scissor"){
+    else if(playerSelection=="paper"&& computerSelection=="scissors"){
         console.log("You Lose! Scissors beats Paper");
     }
     else if(playerSelection=="paper"&& computerSelection=="rock"){
