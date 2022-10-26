@@ -4,12 +4,15 @@ function getComputerChoice(){
     //Each value has a differnt outcome  
     if(compChoice==0){                      //branch for Rock
             console.log("rock");
+            return "rock";
     }
     else if(compChoice==1){                          //branch for Paper
             console.log("paper");
+            return "paper";
     }
     else{                         //branch for Scissors
             console.log("scissors");
+            return "scissors";
     }
 }
 
