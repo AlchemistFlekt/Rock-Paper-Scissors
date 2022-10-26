@@ -13,23 +13,23 @@ function getComputerChoice(){
     }
 }
 
-function playRound(playerSelection, computerSelction){              //function to determine outcome of round
-    if(playerSelection=="rock"&& computerSelction=="paper"){
+function playRound(playerSelection, computerSelection){              //function to determine outcome of round
+    if(playerSelection=="rock" && computerSelection=="paper"){
         console.log("You Lose! Paper beats Rock");
     }
-    else if(playerSelection=="rock"&& computerSelction=="scissors"){
+    else if(playerSelection=="rock"&& computerSelection=="scissors"){
         console.log("You Win! Rock beats Scissors");
     }
-    else if(playerSelection=="scissors"&& computerSelction=="paper"){
+    else if(playerSelection=="scissors"&& computerSelection=="paper"){
         console.log("You Win! Scissors beats Paper");
     }
-    else if(playerSelection=="scissor"&& computerSelction=="rock"){
+    else if(playerSelection=="scissor"&& computerSelection=="rock"){
         console.log("You Lose! Rock beats Scissors");
     }
-    else if(playerSelection=="paper"&& computerSelction=="scissor"){
+    else if(playerSelection=="paper"&& computerSelection=="scissor"){
         console.log("You Lose! Scissors beats Paper");
     }
-    else if(playerSelection=="paper"&& computerSelction=="rock"){
+    else if(playerSelection=="paper"&& computerSelection=="rock"){
         console.log("You Win! Paper beats Rock");
     }
     else{                           //If player and computer choose same option
@@ -37,14 +37,16 @@ function playRound(playerSelection, computerSelction){              //function t
     }
 
 }
-function game{                       //Play a 5 round game
-    for(let i= 0; i<5; i++){         //Loop for playing multiple rounds, stopping after fifth round
-
+function game(){   
+                       //Play a 5 round game
+    for(let i= 0; i<1; i++){         //Loop for playing multiple rounds, stopping after fifth round
+        let userInput= prompt("Choose Rock, Paper, or Scissors");
+        playerSelection= userInput.toLowerCase();
+        console.log(playerSelection);
+        let computerSelection= getComputerChoice();
+        playRound(playerSelection, computerSelection);
     }
-
 }
 
 
-const playerSelection= "rock";
-const computerSelction = getComputerChoice();
-console.log(playRound);
+
