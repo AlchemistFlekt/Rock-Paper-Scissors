@@ -13,29 +13,38 @@ function getComputerChoice(){
     }
 }
 
-function playRound(playerSelection, computerSelction){
+function playRound(playerSelection, computerSelction){              //function to determine outcome of round
     if(playerSelection=="rock"&& computerSelction=="paper"){
-        return "You Lose! Paper beats Rock";
+        console.log("You Lose! Paper beats Rock");
     }
     else if(playerSelection=="rock"&& computerSelction=="scissors"){
-        return "You Win! Rock beats Scissors";
+        console.log("You Win! Rock beats Scissors");
     }
     else if(playerSelection=="scissors"&& computerSelction=="paper"){
-        return "You Win! Scissors beats Paper";
+        console.log("You Win! Scissors beats Paper");
     }
     else if(playerSelection=="scissor"&& computerSelction=="rock"){
-        return "You Lose! Rock beats Scissors";
+        console.log("You Lose! Rock beats Scissors");
     }
     else if(playerSelection=="paper"&& computerSelction=="scissor"){
-        return "You Lose! Scissors beats Paper";
+        console.log("You Lose! Scissors beats Paper");
     }
     else if(playerSelection=="paper"&& computerSelction=="rock"){
-        return "You Win! Paper beats Rock";
+        console.log("You Win! Paper beats Rock");
     }
-    else{
-        return "It's a draw!"
+    else{                           //If player and computer choose same option
+        console.log("It's a draw!");
     }
 
 }
+function game{                       //Play a 5 round game
+    for(let i= 0; i<5; i++){         //Loop for playing multiple rounds, stopping after fifth round
+
+    }
+
+}
+
+
 const playerSelection= "rock";
 const computerSelction = getComputerChoice();
+console.log(playRound);
