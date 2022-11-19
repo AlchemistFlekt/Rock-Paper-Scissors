@@ -3,20 +3,20 @@ function getComputerChoice(){
     let compChoice= Math.floor(Math.random() *3);    //Have the computer pick a random integer between 0-2 (3 possible values)
     //Each value has a differnt outcome  
     if(compChoice==0){                      //branch for Rock
-            console.log("rock");
-            return "rock";
+        console.log("rock");
+        return "rock";
     }
     else if(compChoice==1){                  //branch for Paper
-            console.log("paper");
-            return "paper";
+        console.log("paper");
+        return "paper";
     }
     else{                                   //branch for Scissors
-            console.log("scissors");
-            return "scissors";
+        console.log("scissors");
+        return "scissors";
     }
 }
 
-function playRound(playerSelection, computerSelection, score){              //function to determine outcome of round, print outcome to console, and updte score
+function playRound(playerSelection, computerSelection, score){              //function to determine outcome of round, print outcome to console, and update score
     if(playerSelection=="rock" && computerSelection=="paper"){
         console.log("You Lose! Paper beats Rock");                          
         return score-1;
@@ -48,7 +48,7 @@ function playRound(playerSelection, computerSelection, score){              //fu
     }
 
 }
-function game(){
+/*function game(){
     let score=0;                                                        //play a 5 round game
     for(let i= 0; i<5; i++){                                            //loop for playing multiple rounds, stopping after fifth round
         let userInput= prompt("Choose Rock, Paper, or Scissors");       //prompt player to choose option
@@ -78,7 +78,27 @@ function game(){
     else{              //branch if score equals 0 meaning player and computer have tied
         console.log("We have tied!");                           //print tied message to console
     }
-}
+}*/
 
+/*console.log(playerSelection);
+let computerSelection= getComputerChoice();
+score= playRound(playerSelection, computerSelection, score);*/
+
+const button =Array.from(document.querySelectorAll('button'));
+
+button.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        let playerSelection= e.target.className;
+        console.log(playerSelection);
+        let computerSelection= getComputerChoice();
+        let score= 0;
+        score= playRound(playerSelection, computerSelection, score);
+    })
+
+    }
+/*console.log(playerSelection);
+let computerSelection= getComputerChoice();
+score= playRound(playerSelection, computerSelection, score);*/
+);
 
 
